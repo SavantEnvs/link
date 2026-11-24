@@ -1,0 +1,9 @@
+project: savantenvs/link
+target: discovery-messenger
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/discovery-messenger/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzz/fuzz_discovery_messenger
+    libfuzzer: true
+    timeout: 5

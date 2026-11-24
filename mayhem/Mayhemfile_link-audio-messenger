@@ -1,0 +1,9 @@
+project: savantenvs/link
+target: link-audio-messenger
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/link-audio-messenger/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzz/fuzz_link_audio_messenger
+    libfuzzer: true
+    timeout: 5

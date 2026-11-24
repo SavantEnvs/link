@@ -1,0 +1,9 @@
+project: savantenvs/link
+target: link-audio-announce
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/link-audio-announce/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzz/fuzz_link_audio_announce
+    libfuzzer: true
+    timeout: 5
